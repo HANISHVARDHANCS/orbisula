@@ -18,7 +18,7 @@ export default function Share() {
   }, []);
 
   const shareUrl = selectedTrip 
-    ? `https://globetrotter.app/trip/${selectedTrip.id}`
+    ? `https://orbisula.app/trip/${selectedTrip.id}`
     : '';
 
   const handleCopy = () => {

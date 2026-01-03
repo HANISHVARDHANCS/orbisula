@@ -37,7 +37,7 @@ export default function Login() {
             <div className="w-14 h-14 rounded-2xl bg-primary-foreground/20 flex items-center justify-center backdrop-blur-sm">
               <MapPin className="w-8 h-8" />
             </div>
-            <h1 className="font-display font-bold text-3xl">GlobeTrotter</h1>
+            <h1 className="font-display font-bold text-3xl">OrbisUla</h1>
           </div>
           <h2 className="font-display text-5xl font-bold leading-tight mb-6">
             Plan Your Perfect
@@ -73,7 +73,7 @@ export default function Login() {
             <div className="w-12 h-12 rounded-xl gradient-ocean flex items-center justify-center">
               <MapPin className="w-7 h-7 text-primary-foreground" />
             </div>
-            <h1 className="font-display font-bold text-2xl text-foreground">GlobeTrotter</h1>
+            <h1 className="font-display font-bold text-2xl text-foreground">OrbisUla</h1>
           </div>
 
           <div className="text-center mb-8">

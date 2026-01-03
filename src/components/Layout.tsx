@@ -38,7 +38,7 @@ export default function Layout({ children }: LayoutProps) {
               <div className="w-10 h-10 rounded-full bg-primary-foreground/20 flex items-center justify-center">
                 <MapPin className="w-6 h-6" />
               </div>
-              <span className="font-display font-bold text-xl hidden sm:block">GlobeTrotter</span>
+              <span className="font-display font-bold text-xl hidden sm:block">OrbisUla</span>
             </Link>
 
             {/* Desktop Nav */}
