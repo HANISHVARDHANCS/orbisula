@@ -1,4 +1,4 @@
-// Simple localStorage-based data store for GlobeTrotter MVP
+// Simple localStorage-based data store for OrbisUla MVP
 
 export interface Trip {
   id: string;
@@ -16,8 +16,8 @@ export interface User {
   name: string;
 }
 
-const TRIPS_KEY = 'globetrotter_trips';
-const USER_KEY = 'globetrotter_user';
+const TRIPS_KEY = 'orbisula_trips';
+const USER_KEY = 'orbisula_user';
 
 // Default trips for demo
 const defaultTrips: Trip[] = [
