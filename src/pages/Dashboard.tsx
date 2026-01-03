@@ -41,12 +41,12 @@ const quickPackages = [
 ];
 
 const popularCities = [
-  { name: 'Jaipur', image: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?w=300', trips: 234 },
-  { name: 'Goa', image: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=300', trips: 456 },
-  { name: 'Kerala', image: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=300', trips: 321 },
-  { name: 'Ladakh', image: 'https://images.unsplash.com/photo-1537572263231-9c14e7803a4b?w=300', trips: 189 },
-  { name: 'Varanasi', image: 'https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=300', trips: 278 },
-  { name: 'Udaipur', image: 'https://images.unsplash.com/photo-1586612438666-ffd0ae97ad36?w=300', trips: 198 },
+  { name: 'Jaipur', image: 'https://images.unsplash.com/photo-1571896349840-3b1b6c4361ff?w=400&fit=crop', trips: 234 },
+  { name: 'Goa', image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&fit=crop', trips: 456 },
+  { name: 'Kerala', image: 'https://images.unsplash.com/photo-1572289629388-25e2727f3f6f?w=400&fit=crop', trips: 321 },
+  { name: 'Ladakh', image: 'https://images.unsplash.com/photo-1571843143733-6646f5f60187?w=400&fit=crop', trips: 189 },
+  { name: 'Varanasi', image: 'https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=400&fit=crop', trips: 278 },
+  { name: 'Udaipur', image: 'https://images.unsplash.com/photo-1586612438666-ffd0ae97ad36?w=400&fit=crop', trips: 198 },
 ];
 
 export default function Dashboard() {
@@ -175,11 +175,16 @@ export default function Dashboard() {
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
           {popularCities.map((city) => (
             <div key={city.name} className="card-travel overflow-hidden cursor-pointer group">
-              <div className="relative h-24 overflow-hidden">
+              <div className="relative h-28 overflow-hidden rounded-t-xl">
                 <img
                   src={city.image}
                   alt={city.name}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    target.parentElement!.innerHTML = `<div class="w-full h-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center"><span class="text-primary-foreground font-display font-bold text-lg">${city.name}</span></div>`;
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
               </div>
